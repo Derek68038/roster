@@ -10,6 +10,14 @@ Roster::Application.routes.draw do
   get "delete" => 'players#delete'
   
   post "delete_results" => 'players#delete_results'
+  
+  get "find_player" => 'players#find_player'
+  
+  post "find_player_results" => 'players#find_player_results'
+  
+  get "update_player" => 'players#update_player'
+  
+  post "update_player_results" => 'players#update_player_results'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

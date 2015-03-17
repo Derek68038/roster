@@ -1,6 +1,10 @@
 Roster::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  get "create" => 'players#create'
+  
+  post "create_results" => 'players#create_results'
+  
   get "players" => 'players#index'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

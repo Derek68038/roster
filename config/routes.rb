@@ -1,21 +1,23 @@
 Roster::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  get "create" => 'players#create'
+  get "home" => 'players'
+  
+  get "create" => 'players'
   
   post "create_results" => 'players#create_results'
   
   get "players" => 'players#index'
   
-  get "delete" => 'players#delete'
+  get "delete" => 'players'
   
   post "delete_results" => 'players#delete_results'
   
-  get "find_player" => 'players#find_player'
+  get "find_player" => 'players'
   
   post "find_player_results" => 'players#find_player_results'
   
-  get "update_player" => 'players#update_player'
+  get "update_player" => 'players'
   
   post "update_player_results" => 'players#update_player_results'
   # Sample of regular route:

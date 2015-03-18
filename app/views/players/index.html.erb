@@ -1,7 +1,11 @@
+<div class="top">
 <h1>All Players</h1>
+</div>
 
+<div class="left">
 <% @players.each do |p| %>
-  <p><%= p.name %>, <%= p.position %></p>
+  <p id="players"><%= p.name %>, <%= p.position %></p>
 <% end %>
+</div>
 
 <p><h3><a href="/home" title="Home">Return To Homepage</a></h3></p>  

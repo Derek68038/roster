@@ -1,5 +1,5 @@
 class Player < ActiveRecord::Base
-  attr_accessible :name, :number, :status_id
+  attr_accessible :name, :number, :position_ids, :status_id
   
   validates :name, presence: true
   validates :number, presence: true
@@ -7,4 +7,15 @@ class Player < ActiveRecord::Base
   
   belongs_to :status
   has_and_belongs_to_many :positions, join_table: :players_positions
+  
+  def positions_comma_separated
+    position_names = []
+    
+    positions.each do |b|  #equivalent to self.positions.each  
+      position_names << b.category  
+    end
+    
+    position_names.join("/ ")
+  end
+  
 end

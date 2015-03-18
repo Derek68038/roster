@@ -4,7 +4,7 @@
 
 <div class="left">
 <% @players.each do |p| %>
-  <p id="players"><%= p.name %> #<%= p.number %>, <%= p.status.health %></p>
+  <p id="players"><%= p.name %> #<%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health %></p>
 <% end %>
 </div>
 

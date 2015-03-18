@@ -4,7 +4,7 @@ class PlayersController < ApplicationController
   end
   
   def create_results
-    @player = Player.create({name: params[:name], position: params[:position]})    
+    @player = Player.create({name: params[:name], number: params[:number], status_id: params[:status_id]})    
     redirect_to "/home/players"
   end
   

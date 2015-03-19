@@ -29,13 +29,9 @@
 </div>
       
   <p><strong><u>Health Status:</u></strong></p> 
-      <select name="status_id">
-        <option value="1">Healthy</option>
-        <option value="2">Probable</option>
-        <option value="3">Doubtful</option>
-        <option value="4">Injured Reserve</option>
-      </select>
-      
+
+  <%= select_tag(:status_id, options_for_select([['Healthy', 1], ['Probable', 2], ['Doubtful', 3], ['Injured Reserve', 4]])) %> 
+  
   <br>
   
   <p><h5>Click the submit button to add the player to your roster.</h5></em></p>

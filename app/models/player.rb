@@ -4,6 +4,7 @@ class Player < ActiveRecord::Base
   validates :name, presence: true
   validates :number, presence: true
   validates :status_id, presence: true
+  validates :position_ids, presence: true
   
   belongs_to :status
   has_and_belongs_to_many :positions, join_table: :players_positions

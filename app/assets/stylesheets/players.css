@@ -18,11 +18,12 @@ body {
   text-align: center;
   color: white;
   background: darkolivegreen;
+  border: 5px;
   border-style: outset;
   margin-bottom: 80px;
 }
 
-h3 {
+#click {
   line-height: 1.5;
   border: solid 1px;
   text-align: center;
@@ -31,6 +32,64 @@ h3 {
   margin-left: 95px;
   margin-right: 95px;
   background: lightblue;
+}
+
+#home {
+  line-height: 1.5;
+  border: solid 1px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-left: 95px;
+  margin-right: 95px;
+  background: lightblue;
+}
+
+#home a {
+  color: navy;
+}
+
+#edit {
+  line-height: 1.5;
+  border: solid 1px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-left: 95px;
+  margin-right: 95px;
+  background: lightblue;
+}
+
+#edit a {
+  color: green;
+}
+
+#delete {
+  line-height: 1.5;
+  border: solid 1px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-left: 95px;
+  margin-right: 95px;
+  background: lightblue;
+}
+
+#delete a {
+  color: red;
+}
+
+#delete a:hover {
+  background-color: red;
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+#size {
+  font-size: 20px;
 }
 
 a {
@@ -43,16 +102,11 @@ a:hover {
   display: block;
 }
 
-.left {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-#players {
-  font-size: 20px;
-}
-
-#submit {
+#submit input {
   background-color: darkolivegreen;
   color: white;
+}
+
+.field_with_errors {
+  background: red;
 }

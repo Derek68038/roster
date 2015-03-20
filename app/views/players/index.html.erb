@@ -2,10 +2,9 @@
 <h1>All Players</h1>
 </div>
 
-<div class="left">
 <% @players.each do |p| %>
-  <p id="players"><a href="/players/<%= p.id %>"><%= p.name %> #<%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health    %></a></p>
+  <p id="click"><a href="/players/<%= p.id %>"><%= p.name %> #<%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health    %></a></p>
 <% end %>
-</div>
 
-<p> <%= link_to("Return To Homepage", home_path)%> </p> 
+
+<p id="home"> <%= link_to("Return To Homepage", home_path)%> </p> 

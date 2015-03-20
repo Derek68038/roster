@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
   
   def index
-    @players = Player.all
+    @players = Player.order(:number)
   end
   
   def new
@@ -21,7 +21,7 @@ class PlayersController < ApplicationController
     @player = Player.find_by_id(params[:id])  
   end
   
-  def delete
+  def destroy
     Player.delete_all("id = '#{params[:id]}'")
     redirect_to "/players"
   end

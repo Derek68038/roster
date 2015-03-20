@@ -2,20 +2,22 @@
 <h1>Edit Player</h1>
 </div>
 
+<div class="center">
 <%= form_for @player do |f| %>
-  <%= f.label "Player Name:" %>
-  <%= f.text_field ("name") %><br>
+  <p id="size"><%= f.label "Player Name:" %></p>
+  <p><%= f.text_field ("name") %></p><br>
   
-  <%= f.label "Player Number:" %>
-  <%= f.number_field ("number") %><br>
+  <p id="size"><%= f.label "Player Number:" %></p>
+  <p><%= f.number_field ("number") %></p><br>
   
-  <%= f.label "Player Position:" %>
-  <%= f.select("position_ids", options_for_select([['QB', 1], ['RB', 2], ['WR', 3], ['TE', 4], ['FB', 5], ['DE', 6], ['OLB', 7],            ['MLB', 8], ['CB', 9], ['S', 10]]), {}, {:multiple => true, :size => 10}) %><br>
+  <p id="size"><%= f.label "Player Position:" %></p>
+  <p><%= f.select("position_ids", options_for_select([['QB', 1], ['RB', 2], ['WR', 3], ['TE', 4], ['FB', 5], ['DE', 6], ['OLB', 7],            ['MLB', 8], ['CB', 9], ['S', 10]]), {}, {:multiple => true, :size => 10}) %></p><br>
   
-  <%= f.label "Health Status:" %>
-  <%= f.select("status_id", options_for_select([['Healthy', 1], ['Probable', 2], ['Doubtful', 3], ['Injured Reserve', 4]])) %><br>
+  <p id="size"><%= f.label "Health Status:" %></p>
+  <p><%= f.select("status_id", options_for_select([['Healthy', 1], ['Probable', 2], ['Doubtful', 3], ['Injured Reserve', 4]])) %></p><br>
   
-  <%= f.submit %> 
+  <p id="submit"><%= f.submit %></p><br> 
 <% end %>
+</div>
   
-<p> <%= link_to("Return To Homepage", home_path)%> </p>  
+<p id="home"> <%= link_to("Return To Homepage", home_path)%> </p>  

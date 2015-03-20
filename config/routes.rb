@@ -1,25 +1,22 @@
 Roster::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  get "home" => 'players#home'
+  get "home" => 'players#home', :as => "home"
   
-  get "home/create" => 'players#create'
+  get "players" => 'players#index', :as => "players"
   
-  post "home/create_results" => 'players#create_results'
+  get "players/new" => 'players#new', :as => "new_player"
   
-  get "home/players" => 'players#index'
+  get "players/:id" => 'players#show', :as => "player"
+    
+  get "players/:id/edit" => 'players#edit', :as => "edit_player"
   
-  get "home/delete" => 'players#delete'
+  post "players" => 'players#create'
   
-  post "home/delete_results" => 'players#delete_results'
+  put "players/:id" => 'players#update'
   
-  get "home/find_player" => 'players#find_player'
+  delete "players/:id" => 'players#delete', :as => "delete"
   
-  post "home/find_player_results" => 'players#find_player_results'
-  
-  get "home/update_player" => 'players#update_player'
-  
-  post "home/update_player_results" => 'players#update_player_results'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

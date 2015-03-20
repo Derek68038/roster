@@ -4,8 +4,8 @@
 
 <div class="left">
 <% @players.each do |p| %>
-  <p id="players"><%= p.name %> #<%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health %></p>
+  <p id="players"><a href="/players/<%= p.id %>"><%= p.name %> #<%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health    %></a></p>
 <% end %>
 </div>
 
-<p><h3><a href="/home" title="Home">Return To Homepage</a></h3></p>  
+<p> <%= link_to("Return To Homepage", home_path)%> </p> 

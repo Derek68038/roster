@@ -12,7 +12,7 @@ class Player < ActiveRecord::Base
   def positions_comma_separated
     position_names = []
     
-    positions.each do |b|  #equivalent to self.positions.each  
+    positions.each do |b|  
       position_names << b.category  
     end
     

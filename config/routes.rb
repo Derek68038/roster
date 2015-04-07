@@ -3,12 +3,10 @@ Roster::Application.routes.draw do
   # first created -> highest priority.
   
   resources :players
-   
-  # get "/" => 'players#home', :as => "/"
   
-  root :to => 'players#home', :as => "home"
+  root :to => 'players#home', :as => "root"
   
-#
+
 #   get "players" => 'players#index', :as => "players"
 #
 #   get "players/new" => 'players#new', :as => "new_player"

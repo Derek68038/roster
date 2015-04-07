@@ -1,5 +1,9 @@
 class PlayersController < ApplicationController
   
+  def home
+    
+  end
+  
   def index
     @players = Player.order(:number)
   end

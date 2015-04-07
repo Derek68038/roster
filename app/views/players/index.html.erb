@@ -3,7 +3,7 @@
 </div>
 
 <% @players.each do |p| %>
-  <p id="click"><a href="/players/<%= p.id %>"><%= p.name %>, <%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health    %></a></p>
+  <p id="click"><a href="/players/<%= p.id %>"><%= p.name %>, #<%= p.number %>, <%= p.positions_comma_separated %>, <%= p.status.health    %></a></p>
 <% end %>
 
 
